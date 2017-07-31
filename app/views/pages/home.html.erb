@@ -5,6 +5,9 @@
 <%= form_tag("/sms/send", method: "post") do %>
 
  <%= label_tag(:q, "Message:") %>
-<%= text_area_tag(:message, "Type your text here", size: "24x6") %>
+<%= text_area_tag(:message, "Type your text here", size: "24x6") %><p></p>
+<%= label_tag(:q, "Phone Number") %>
+<%= text_field_tag(:q) %>
+<p></p>
   <%= submit_tag("Send") %>
 <% end %>
